@@ -1,6 +1,6 @@
 <?php
 
-namespace cloudmall\rest;
+namespace cloudMall\rest;
 
 class ActiveController extends \yii\rest\ActiveController {
 
@@ -90,7 +90,7 @@ class ActiveController extends \yii\rest\ActiveController {
             }
             $actionName = $actionName;
             $actions[$actionName] = [
-                'class' => 'cloudmall\rest\Action',
+                'class' => 'cloudMall\rest\Action',
                 'modelClass' => $this->modelClass,
                 'checkAccess' => [$this, 'checkAccess'],
                 'relation' => $relation,
@@ -136,7 +136,7 @@ class ActiveController extends \yii\rest\ActiveController {
         $action = $this->_currentAction;
         if (property_exists($action, 'serializer') && $action->serializer) {
             if (!array_key_exists('class', $action->serializer)) {
-                $action->serializer['class'] = 'cloudmall\rest\Serializer';
+                $action->serializer['class'] = 'cloudMall\rest\Serializer';
             }
             if (!array_key_exists('expand', $action->serializer)) {
                 if (property_exists($action, 'expand')) {

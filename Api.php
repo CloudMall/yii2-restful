@@ -1,6 +1,6 @@
 <?php
 
-namespace cloudmall\rest;
+namespace cloudMall\rest;
 
 class Api {
 
